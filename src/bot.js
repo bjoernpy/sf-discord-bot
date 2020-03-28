@@ -45,9 +45,17 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = client.channels.cache.get(welcome_channel_id);
-  if (!channel) return;
-  channel.send(`Welcome ${member} to our Server. If you want my help call me with ${prefix}help.`);
+  var channel;
+  if (process.env.NODE_ENV === 'production') {
+    channel = client.channels.cache.get(process.env.WELCOME_CHANNEL_ID);
+  } else {
+    channel = client.channels.cache.get(welcome_channel_id);
+  }
+  if (!channel) {
+    console.log(`A new member called ${member.displayName} joined the Server ${member.guild.name}, but no welcome channel was found.`);
+    return;
+  }
+  channel.send(`Welcome ${member.displayName} to our Server ${member.guild.name}. If you want my help call me with ${prefix}help.`);
 });
 
 // In production mode read the token from env
