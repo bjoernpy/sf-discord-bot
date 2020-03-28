@@ -1,0 +1,38 @@
+{
+  "General information": [
+    {
+      "name": "Official Manual",
+      "url": "https://forum-int.sfgame.net/showthread.php?t=4509"
+    },
+    {
+      "name": "Official Forum",
+      "url": "https://forum-int.sfgame.net/"
+    },
+    {
+      "name": "number13 (Guides)",
+      "url": "https://en.number13.de/tag/shakes-fidget/"
+    },
+    {
+      "name": "4m7 (Scrapbook, Dungeons, etc.)",
+      "url": "https://en.4m7.de/sammelalbum/"
+    }
+  ],
+  "Events": [
+    {
+      "name": "Event-Calender",
+      "url": "https://blog.black-pirates.info/daten/events/"
+    }
+  ],
+  "Pets": [
+    {
+      "name": "Pet Guide",
+      "url": "https://en.number13.de/shakes-fidget-pet-guide/"
+    }
+  ],
+  "Underworld": [
+    {
+      "name": "Underworld Guide",
+      "url": "https://en.number13.de/shakes-fidget-underworld-guide/"
+    }
+  ]
+}
