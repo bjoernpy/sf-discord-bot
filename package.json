@@ -1,6 +1,6 @@
 {
   "name": "sf-discord-bot",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A discord bot for Shakes and Fidget.",
   "main": "src/bot.js",
   "scripts": {
