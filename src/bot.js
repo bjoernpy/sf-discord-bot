@@ -45,9 +45,14 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member => {
-    const channel = client.channels.cache.get(welcome_channel_id);
-    if (!channel) return;
-    channel.send(`Welcome ${member} to our Server. If you want my help call me with ${prefix}help.`);
+  const channel = client.channels.cache.get(welcome_channel_id);
+  if (!channel) return;
+  channel.send(`Welcome ${member} to our Server. If you want my help call me with ${prefix}help.`);
 });
 
-client.login(token);
+// In production mode read the token from env
+if (process.env.NODE_ENV === 'production') {
+  client.login(process.env.BOT_TOKEN);
+} else {
+  client.login(token);
+}
